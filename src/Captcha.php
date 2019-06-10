@@ -1,6 +1,6 @@
 <?php
 
-namespace Yangbx\CaptchaLumen;
+namespace Sunlong\CaptchaLumen;
 
 
 use Cache;
