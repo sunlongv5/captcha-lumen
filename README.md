@@ -93,3 +93,7 @@ public function checkCaptcha(Request $request, $type = 'default',$captchaUuid)
 * [Laravel website](http://laravel.com)
 * [Laravel Turkiye website](http://www.laravel.gen.tr)
 * [MeWebStudio website](http://www.mewebstudio.com)
+
+
+注：本人使用后发现验证码显示不了
+在E:\WWW\ICApi\vendor\yangbx\captcha-lumen\src\Captcha.php 282行增加了 ob_clean(); 
