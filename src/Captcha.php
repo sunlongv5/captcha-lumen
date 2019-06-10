@@ -280,7 +280,7 @@ class Captcha
         {
             $this->image->blur($this->blur);
         }
-
+        ob_clean();
         return $this->image->response('png', $this->quality);
     }
 

@@ -1,13 +1,13 @@
 {
-    "name": "yangbx/captcha-lumen",
+    "name": "sunlong/captcha-lumen",
     "description": "captcha for lumen",
     "keywords": ["lumen Captcha", "Captcha", "Captcha for api"],
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "yangbx",
-            "email": "joejoeyang0609@gmail.com"
+            "name": "sunlong",
+            "email": "sunlong@gmail.com"
         }
     ],
     "minimum-stability": "dev",
