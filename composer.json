@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yangbx\\CaptchaLumen\\": "src/"
+            "Sunlong\\CaptchaLumen\\": "src/"
         },
         "files": [
             "src/helpers.php"
