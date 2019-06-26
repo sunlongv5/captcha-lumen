@@ -11,14 +11,14 @@ class ComposerStaticInitb4459af951c2913ae329bf70d31e741c
     );
 
     public static $prefixLengthsPsr4 = array (
-        'Y' => 
+        'S' => 
         array (
-            'Yangbx\\CaptchaLumen\\' => 20,
+            'Sunlong\\CaptchaLumen\\' => 21,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Yangbx\\CaptchaLumen\\' => 
+        'Sunlong\\CaptchaLumen\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

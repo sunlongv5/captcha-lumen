@@ -23,6 +23,9 @@ class LumenCaptchaController extends Controller
 
     public function getCaptcha(Captcha $captcha, $type = 'default', $captchaId)
     {
+        ob_clean();
+        header('Content-Type:image/png');
+        return $captcha->createById($type, $captchaId)->getContent();
         return response($captcha->createById($type, $captchaId), 200)->header('Content-Type', 'image/png');
     }
 
