@@ -23,9 +23,6 @@ class LumenCaptchaController extends Controller
 
     public function getCaptcha(Captcha $captcha, $type = 'default', $captchaId)
     {
-        ob_clean();
-        header('Content-Type:image/png');
-        return $captcha->createById($type, $captchaId)->getContent();
         return response($captcha->createById($type, $captchaId), 200)->header('Content-Type', 'image/png');
     }
 
@@ -43,7 +40,12 @@ class LumenCaptchaController extends Controller
             'captchaUrl'=>$urlDomain.'/captcha/'.$type.'/'.$captchaUuid,
             'captchaUuid'=>(string)$captchaUuid
         ];
-        return response()->json($captchaData);
+        if($callback = $request->get('callback','')){
+            return response($callback.'('.json_encode($captchaData).')');
+        }else{
+            return response()->json($captchaData);
+        }
+
     }
 
     /**
@@ -60,4 +62,5 @@ class LumenCaptchaController extends Controller
             .substr($charId, 20, 12);
         return $uuid;
     }
+
 }
